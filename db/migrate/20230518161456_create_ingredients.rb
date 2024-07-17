@@ -3,7 +3,7 @@ class CreateIngredients < ActiveRecord::Migration[7.0]
     create_table :ingredients do |t|
       t.string :name
       t.integer :cost
-
+      t.references :recipe, foreign_key: true
       t.timestamps
     end
   end
